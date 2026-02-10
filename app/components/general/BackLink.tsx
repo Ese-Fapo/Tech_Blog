@@ -8,8 +8,8 @@ interface BackLinkProps {
 }
 
 export default function BackLink({
-  href = "#",
-  label = "Voltar",
+  href = "https://my-website-beta-lovat.vercel.app/",
+  label = "Voltar para o site",
   className = "",
 }: BackLinkProps) {
   return (
