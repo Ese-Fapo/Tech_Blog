@@ -5,7 +5,7 @@
 ## Configuration Steps
 
 ### 1. Environment Variables
-Create a `.env` file in the root directory (this file is gitignored and won't be tracked):
+Create a `` file in the root directory (this file is gitignored and won't be tracked):
 
 ```env
 GOOGLE_CLIENT_ID="your-google-client-id.apps.googleusercontent.com"

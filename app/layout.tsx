@@ -15,8 +15,8 @@ const poppings = Poppins({
 
 
 export const metadata: Metadata = {
-  title: "Prime Site Developer",
-  description: "Prime Site Developer - web development, technology insights, and modern digital experiences.",
+  title: "Bem Site Developer",
+  description: "Bem Site Developer - web development, technology insights, and modern digital experiences.",
 };
 
 export default function RootLayout({

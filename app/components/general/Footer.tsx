@@ -16,7 +16,7 @@ export default function Footer() {
           {/* Brand Section */}
           <div className='space-y-4'>
             <h3 className='text-2xl font-bold bg-linear-to-r from-amber-400 via-orange-400 to-pink-400 bg-clip-text text-transparent drop-shadow-sm'>
-              Prime Site Developer
+               Bem Site Developer
             </h3>
             <p className='text-gray-400 text-sm leading-relaxed'>
               Desenvolvimento web moderno, performance e experiências digitais feitas sob medida.
@@ -128,7 +128,7 @@ export default function Footer() {
         <div className='pt-8 border-t border-gray-800'>
           <div className='flex flex-col md:flex-row justify-between items-center gap-4'>
             <p className='text-gray-400 text-sm text-center md:text-left'>
-              © {new Date().getFullYear()} Prime Site Developer. Todos os direitos reservados.
+              © {new Date().getFullYear()} Bem Site Developer. Todos os direitos reservados.
             </p>
             <div className='flex items-center gap-1 text-gray-400 text-sm'>
              

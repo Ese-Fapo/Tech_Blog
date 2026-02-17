@@ -163,8 +163,7 @@ export default function ArticlesPage() {
               📚 Escolha um assunto que você ache interessante
             </h1>
             <p className="text-gray-100 text-base sm:text-lg md:text-xl max-w-2xl animate-slide-up animation-delay-200">
-              Explore nossa coleção completa de artigos sobre tecnologia,
-              programação e inovação.
+              Se você está começando um novo negócio, construindo sua marca pessoal ou buscando aumentar suas vendas, nós ajudamos você a entender qual solução de site melhor se encaixa nos seus objetivos.
             </p>
             <div className="flex flex-wrap gap-3 mt-6">
               <span className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-white text-sm font-semibold">
