@@ -8,7 +8,6 @@ import { useEffect, useState } from "react";
 import { notFound, useRouter } from "next/navigation";
 import { getPostsBySlug } from "@/app/server-actions/getPosts";
 import HomeButton from "@/app/components/general/HomeButton";
-import BackLink from "@/app/components/general/BackLink";
 import axios from 'axios';
 import toast from 'react-hot-toast';
 import { authClient } from '@/lib/auth-client';
@@ -148,9 +147,6 @@ export default function BlogView({ slug }: BlogViewProps) {
   return (
     <div>
       <article className="max-w-4xl mx-auto py-12 md:py-20 px-4 sm:px-6">
-        <div className="mb-6">
-          <BackLink href="/articles" />
-        </div>
         {/* Home Button - Top */}
         <div className='mb-8'>
           <HomeButton />
@@ -259,9 +255,6 @@ export default function BlogView({ slug }: BlogViewProps) {
         {/* Home Button - Bottom */}
         <div className='mt-12 flex justify-center'>
           <HomeButton />
-        </div>
-        <div className="mt-8">
-          <BackLink href="/articles" />
         </div>
       </article>
     </div>
