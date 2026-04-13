@@ -2,11 +2,36 @@ import { betterAuth } from "better-auth";
 import { prismaAdapter } from "better-auth/adapters/prisma";
 import { prisma } from "./prisma";
 
+const normalizeUrl = (url?: string) => url?.replace(/\/+$/, "");
+
+const isProduction = process.env.NODE_ENV === "production";
+const vercelUrl = process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : undefined;
+const configuredAuthUrl = normalizeUrl(process.env.BETTER_AUTH_URL);
+
+const authBaseUrl = isProduction
+    ? configuredAuthUrl || normalizeUrl(vercelUrl) || "https://tech-blog-i77h-5eu5ojvnm-ese-fapohundas-projects.vercel.app"
+    : "http://localhost:3000";
+
+const trustedOrigins = Array.from(
+    new Set(
+        [
+            authBaseUrl,
+            configuredAuthUrl,
+            normalizeUrl(vercelUrl),
+            "http://localhost:3000",
+            "http://127.0.0.1:3000",
+        ].filter(Boolean)
+    )
+) as string[];
+
 export const auth = betterAuth({
     database: prismaAdapter(prisma, {
         provider: "postgresql",
     }),
-    baseURL: process.env.BETTER_AUTH_URL || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "https://tech-blog-i77h-5eu5ojvnm-ese-fapohundas-projects.vercel.app"),
+        baseURL: authBaseUrl,
+        trustedOrigins,
     emailAndPassword: {
         enabled: true,
     },

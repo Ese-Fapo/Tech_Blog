@@ -75,7 +75,7 @@ export default function SignInModal() {
       localStorage.setItem("loginProvider", "google");
       await authClient.signIn.social({
         provider: "google",
-        callbackURL: "/",
+        callbackURL: "/write",
       });
       setLoginProvider("google");
       closeSignIn();
@@ -95,7 +95,7 @@ export default function SignInModal() {
       localStorage.setItem("loginProvider", "github");
       await authClient.signIn.social({
         provider: "github",
-        callbackURL: "/",
+        callbackURL: "/write",
       });
       setLoginProvider("github");
       closeSignIn();
@@ -150,7 +150,7 @@ export default function SignInModal() {
             )}
           </div>
 
-          <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 border border-blue-500/50 rounded-lg p-4">
+          <div className="bg-linear-to-br from-blue-600/20 to-purple-600/20 border border-blue-500/50 rounded-lg p-4">
             <div className="flex items-center gap-3">
               {user.image && (
                 <img 

@@ -127,9 +127,22 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className='pt-8 border-t border-gray-800'>
           <div className='flex flex-col md:flex-row justify-between items-center gap-4'>
-            <p className='text-gray-400 text-sm text-center md:text-left'>
-              © {new Date().getFullYear()} Bem Site Developer. Todos os direitos reservados.
-            </p>
+            <div className='text-center md:text-left space-y-1'>
+              <p className='text-gray-400 text-sm'>
+                © {new Date().getFullYear()} Bem Site Developer. Todos os direitos reservados.
+              </p>
+              <p className='text-gray-400 text-sm'>
+                 This site is created and maintained by : {" "} 
+                <a
+                  href='https://sitesprofissionai.com/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='text-cyan-300 hover:text-cyan-200 underline underline-offset-2 transition-colors'
+                >
+                  sitesprofissionai.com
+                </a>
+              </p>
+            </div>
             <div className='flex items-center gap-1 text-gray-400 text-sm'>
              
               <FaHeart className='text-red-600 animate-pulse' size={14} />

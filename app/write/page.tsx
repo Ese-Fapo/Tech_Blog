@@ -147,6 +147,14 @@ export default function WritePage() {
             </p>
           </div>
         ) : (
+          <div className='space-y-8'>
+          <div className='bg-linear-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/40 rounded-lg p-5'>
+            <h2 className='text-xl font-semibold text-white mb-2'>Você está logado 🎉</h2>
+            <p className='text-gray-300'>
+              Agora é sua vez de brilhar: escreva um artigo e compartilhe sua experiência com a comunidade.
+            </p>
+          </div>
+
           <form onSubmit={handleSubmit} className='space-y-8'>
           {/* Title Input */}
           <div className='space-y-3'>
@@ -238,13 +246,14 @@ export default function WritePage() {
             </button>
             <button
               type='submit'
-              className='flex-1 sm:flex-none bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold px-8 py-3 rounded-lg transition-all duration-200 transform hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none'
+              className='flex-1 sm:flex-none bg-linear-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold px-8 py-3 rounded-lg transition-all duration-200 transform hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none'
               disabled={isSubmitting}
             >
               {isSubmitting ? 'Publicando...' : 'Publicar Artigo'}
             </button>
           </div>
         </form>
+        </div>
         )}
         
         {/* Home Button - Bottom */}
